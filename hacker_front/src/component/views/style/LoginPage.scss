@@ -8,20 +8,31 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: dimgray;
-  .login-form {
+  background-image: url("../image/login_back.png");
+
+  .login-form  {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     width: 1200px;
-    height: 700px;
+    height: 570px;
     box-shadow: 0px 0px 20px #000;
   }
+  .image{
+    background-size: cover;
+  }
   .non-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: #362d54;
     h1 {
       font-size: 32px;
-      color: #fff;
+      color: white;
       font-weight: bold;
       text-align: center;
       margin-bottom: 60px ;
@@ -54,18 +65,9 @@
     label {
       position: absolute;
       left: 10px;
-      top: 15px;
-      font-size: 18px;
-      color: #fff;
-      transition: top .7s ease;
-    }
-
-    input {
-      &:focus + label, &:valid + label {
-        top: -2px;
-        font-size: 14px;
-        color: grey;
-      }
+      top: -2px;
+      font-size: 14px;
+      color: white;
     }
   }
   .btn-area {
@@ -74,7 +76,7 @@
     margin-top: 30px;
 
     button {
-      width: 50%;
+      width: 200px;
       height: 50px;
       background: lightslategray;
       font-size: 20px;

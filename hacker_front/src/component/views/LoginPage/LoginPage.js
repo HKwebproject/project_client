@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../style/LoginPage.scss";
-
+import loginImage from "../image/login_background.png";
 function LoginPage() {
     const [Id, setId] = useState("");
     const [Password, setPassword] = useState("");
@@ -19,6 +19,7 @@ function LoginPage() {
     return (
         <div id="body">
             <div className="login-form">
+                <img className="image" alt="image" src={loginImage}/>
                 <div className="non-image" onSubmit={onSubmitHandler}>
                     <h1>Hacker</h1>
                     <div className="input-area">
