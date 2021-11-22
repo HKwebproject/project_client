@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../style/LoginPage.scss";
 import { Icon, Input } from "semantic-ui-react"
-import loginImage from "../image/login_background.png";
+import loginimage from "../image/login_image.png";
 
 function LoginPage() {
     const [Id, setId] = useState("");
@@ -21,7 +21,9 @@ function LoginPage() {
     return (
         <div id="body">
             <div className="login-form">
-                <img className="image" alt="image" src={loginImage}/>
+                <div className="image-wrapper">
+                    <img alt="image" src={loginimage}/>
+                </div>
                 <div className="non-image" onSubmit={onSubmitHandler}>
                     <h1>Welcome!</h1>
                     <div className="input-area">
