@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../style/LoginPage.scss";
+import { Icon, Input } from "semantic-ui-react"
 import loginImage from "../image/login_background.png";
+
 function LoginPage() {
     const [Id, setId] = useState("");
     const [Password, setPassword] = useState("");
@@ -21,18 +23,26 @@ function LoginPage() {
             <div className="login-form">
                 <img className="image" alt="image" src={loginImage}/>
                 <div className="non-image" onSubmit={onSubmitHandler}>
-                    <h1>Hacker</h1>
+                    <h1>Welcome!</h1>
                     <div className="input-area">
-                        <input type="text" value={Id} autoComplete="off" onChange={onIdHandler} />
-                        <label>USER ID</label>
+                        <Input
+                            icon={<Icon name='at'/>}
+                            iconPosition='left'
+                            placeholder="Email"
+                            type="text"
+                            value={Id}
+                            autoComplete="off"
+                            onChange={onIdHandler}/>
                     </div>
                     <div className="input-area">
-                        <input
+                        <Input
+                            icon={<Icon name='lock'/>}
+                            iconPosition='left'
+                            placeholder="Password"
                             type="password"
                             value={Password}
-                            onChange={onPasswordHandler}
-                        />
-                        <label>USER PASSWORD</label>
+                            autoComplete="off"
+                            onChange={onPasswordHandler}/>
                     </div>
                     <div className="btn-area">
                         <button >Login</button>

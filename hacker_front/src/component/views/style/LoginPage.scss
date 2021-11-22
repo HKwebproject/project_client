@@ -16,8 +16,8 @@
     align-items: center;
     flex-direction: row;
     width: 1200px;
-    height: 570px;
-    box-shadow: 0px 0px 20px #000;
+    height: 575px;
+    box-shadow: 0px 0px 30px #41366c;
   }
   .image{
     background-size: cover;
@@ -29,13 +29,13 @@
     flex-direction: column;
     width: 50%;
     height: 100%;
-    background-color: #362d54;
+    background-color: #4e3f7c;
     h1 {
-      font-size: 32px;
+      font-size: 50px;
       color: white;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 60px ;
+      margin-bottom: 70px ;
     }
   }
   .input-area {
@@ -48,23 +48,20 @@
     font-weight: bold;
     font-size: medium;
 
-    &:first-child {
-      margin-top: 0;
-    }
-    input {
-      width: 100%;
-      padding: 20px 10px 10px;
+    Input {
+      width: 75%;
+      padding: 15px .8em .8em;
       background-color: transparent;
-      border: none;
-      border-bottom: 1px solid #999;
+      border: 2px solid white;
+      border-radius: 30px;
       font-size: 18px;
-      color: teal;
+      color: white;
       outline: none;
     }
 
     label {
       position: absolute;
-      left: 10px;
+      left: 40px;
       top: -2px;
       font-size: 14px;
       color: white;
@@ -76,13 +73,13 @@
     margin-top: 30px;
 
     button {
-      width: 200px;
+      width: 150px;
       height: 50px;
-      background: lightslategray;
+      background: #4e3f7c;
       font-size: 20px;
       color: white;
+      border: 2px solid white;
       font-weight: bold;
-      border: none;
       border-radius: 25px;
       cursor: pointer;
     }
