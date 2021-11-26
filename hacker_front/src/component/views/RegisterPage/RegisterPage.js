@@ -1,23 +1,37 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import "../style/RegisterPage.scss";
-import { Icon, Input } from "semantic-ui-react"
+import { Button, Icon, Input } from "semantic-ui-react"
 import registerimage from "../image/register_image.png";
 
 function RegisterPage() {
-    const [Id, setId] = useState("");
+    const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
+    const [PasswordCheck,setPasswordCheck] = useState("");
+    const [Personality, setPersonality] = useState("");
+    const [PasswordError,setPasswordError] = useState(false);
 
     const onIdHandler = (event) => {
-        setId(event.currentTarget.value);
+        setEmail(event.currentTarget.value);
     };
     const onPasswordHandler = (event) => {
         setPassword(event.currentTarget.value);
     };
-    const onSubmitHandler = (event) => {
-        event.preventDefault();
-        console.log("Id", Id);
-        console.log("Password", Password);
+    const onPersonalityHandler = (event) => {
+        setPersonality(event.currentTarget.value);
     };
+    const onPasswordChkHandler = useCallback((event) => {
+        //비밀번호를 입력할때마다 password 를 검증하는 함수
+        setPasswordError(event.currentTarget.value !== Password);
+        setPasswordCheck(event.currentTarget.value);
+    },[PasswordCheck]);
+    const onSubmitHandler = useCallback((event) => {
+        event.preventDefault();
+        if(Password !== PasswordCheck){
+            return setPasswordError(true);
+        }
+        console.log("Email",Email);
+        console.log("Password", Password);
+    },[Password,PasswordCheck]);
     return (
         <div id="body">
             <div className="login-form">
@@ -29,7 +43,7 @@ function RegisterPage() {
                             iconPosition='left'
                             placeholder="Email"
                             type="text"
-                            value={Id}
+                            value={Email}
                             autoComplete="off"
                             onChange={onIdHandler}/>
                     </div>
@@ -42,9 +56,26 @@ function RegisterPage() {
                             value={Password}
                             autoComplete="off"
                             onChange={onPasswordHandler}/>
+                        {PasswordError && <div style={{color : 'red'}}>!</div>}
+                    </div>
+                    <div className="input-area">
+                        <Input
+                            icon={<Icon name='check'/>}
+                            iconPosition='left'
+                            placeholder="Check your Password"
+                            type="password"
+                            value={PasswordCheck}
+                            autoComplete="off"
+                            onChange={onPasswordChkHandler}/>
                     </div>
                     <div className="btn-area">
-                        <button >Register</button>
+                        <div className="btn-area" >
+                            <Button className='register-btn'
+                                    content='Sign up'
+                                    icon='signup'
+                                    size='small'
+                                    iconPosition='left'/>
+                        </div>
                     </div>
                 </div>
                 <div className="image-wrapper">

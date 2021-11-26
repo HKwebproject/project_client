@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3c44963-4c12-4883-b940-6294faf1be2b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/component/views/style/RegisterPage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/views/LoginPage/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/views/LoginPage/LoginPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/views/RegisterPage/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/views/RegisterPage/RegisterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/views/image/login_background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/views/image/undraw_Designer_life_re_6ywf.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/views/image/undraw_Web_devices_re_m8sc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/views/style/LoginPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/views/style/LoginPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/views/style/RegisterPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/views/style/RegisterPage.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
