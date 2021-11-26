@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../style/LoginPage.scss";
-import { Icon, Input } from "semantic-ui-react"
+import { Button, Icon, Input } from "semantic-ui-react"
 import loginImage from "../image/login_background.png";
 
 function LoginPage() {
@@ -45,7 +45,12 @@ function LoginPage() {
                             onChange={onPasswordHandler}/>
                     </div>
                     <div className="btn-area">
-                        <button >Login</button>
+                        <Button className='login-btn'
+                                content='Login'
+                                size='small'/>
+                        <Button className='register-btn'
+                                content='Register'
+                                size='small'/>
                     </div>
                 </div>
             </div>
