@@ -21,7 +21,9 @@ function LoginPage() {
     return (
         <div id="body">
             <div className="login-form">
-                <img className="image" alt="image" src={loginImage}/>
+                <div className="image-wrapper">
+                    <img alt="image" src={loginimage}/>
+                </div>
                 <div className="non-image" onSubmit={onSubmitHandler}>
                     <h1>Welcome!</h1>
                     <div className="input-area">

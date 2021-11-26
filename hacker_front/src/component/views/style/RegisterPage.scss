@@ -17,13 +17,14 @@
     flex-direction: row;
     width: 1200px;
     height: 575px;
-    box-shadow: 0px 0px 30px #41366c;
+    box-shadow: 0px 0px 30px #2e2650;
   }
   .image-wrapper{
     height: 100%;
     display: flex;
     align-items: center;
     background-color: white;
+
   }
   .non-image{
     display: flex;
@@ -32,7 +33,7 @@
     flex-direction: column;
     width: 50%;
     height: 100%;
-    background-color: #4e3f7c;
+    background-color: #382c60;
     h1 {
       font-size: 50px;
       color: white;
@@ -79,9 +80,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 150px;
+      width: 160px;
       height: 50px;
-      background: #4e3f7c;
+      background: transparent;
       font-size: 20px;
       color: white;
       border: 2px solid white;
