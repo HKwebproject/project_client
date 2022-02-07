@@ -5,6 +5,7 @@ import LoginPage from "./component/views/LoginPage/LoginPage";
 import MainPage from "./component/views/MainPage/MainPage";
 import RegisterPage from "./component/views/RegisterPage/RegisterPage";
 import "./static/fonts/font.css";
+
 function App () {
   return (
       <Router>
