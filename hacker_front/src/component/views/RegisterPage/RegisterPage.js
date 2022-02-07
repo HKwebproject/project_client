@@ -1,17 +1,24 @@
 import React, { useCallback, useState } from "react";
 import "../style/RegisterPage.scss";
-import { Button, Icon, Input } from "semantic-ui-react"
+import { Button, Icon, Input } from "semantic-ui-react";
 import registerimage from "../image/register_image.png";
+import { useDispatch } from 'react-redux';
+import { register } from "../../../modules/register"; // Issue 에 등록하기
+import { useNavigate } from 'react-router-dom';
 
-function RegisterPage() {
-    const [Email, setEmail] = useState("");
+function RegisterPage(props) {
+
+    const dispatch = useDispatch();
+
+    const navigate = useNavigate();
+    const [Id, setId] = useState("");
     const [Password, setPassword] = useState("");
     const [PasswordCheck,setPasswordCheck] = useState("");
     const [Personality, setPersonality] = useState("");
     const [PasswordError,setPasswordError] = useState(false);
 
     const onIdHandler = (event) => {
-        setEmail(event.currentTarget.value);
+        setId(event.currentTarget.value);
     };
     const onPasswordHandler = (event) => {
         setPassword(event.currentTarget.value);
@@ -19,23 +26,45 @@ function RegisterPage() {
     const onPersonalityHandler = (event) => {
         setPersonality(event.currentTarget.value);
     };
-    const onPasswordChkHandler = useCallback((event) => {
+    const onPasswordChkHandler = (event) => {
         //비밀번호를 입력할때마다 password 를 검증하는 함수
         setPasswordError(event.currentTarget.value !== Password);
         setPasswordCheck(event.currentTarget.value);
-    },[PasswordCheck]);
-    const onSubmitHandler = useCallback((event) => {
+    };
+    // 
+    const onSubmitHandler = (event) => {
         event.preventDefault();
+
         if(Password !== PasswordCheck){
             return setPasswordError(true);
         }
-        console.log("Email",Email);
+        console.log("Id",Id);
         console.log("Password", Password);
-    },[Password,PasswordCheck]);
+      
+        const data ={
+            name: "강병호호123",
+            email: "12345555",
+            id: Id,
+            password: Password,
+
+        }
+
+        dispatch(register(data)) //register 라는 action
+            .then(res => {
+                if (res.payload.success) {
+                    // props.history.push("/login");
+                    // navigate("/login");
+                } else {
+                    alert(res.payload.err);
+                }
+            })
+    };
+
+
     return (
         <div id="body">
             <div className="login-form">
-                <div className="non-image" onSubmit={onSubmitHandler}>
+                <div className="non-image" >
                     <h1>Welcome!</h1>
                     <div className="input-area">
                         <Input
@@ -43,7 +72,7 @@ function RegisterPage() {
                             iconPosition='left'
                             placeholder="Email"
                             type="text"
-                            value={Email}
+                            value={Id}
                             autoComplete="off"
                             onChange={onIdHandler}/>
                     </div>
@@ -69,7 +98,7 @@ function RegisterPage() {
                             onChange={onPasswordChkHandler}/>
                     </div>
                     <div className="btn-area">
-                        <div className="btn-area" >
+                        <div className="btn-area" onClick={onSubmitHandler} >
                             <Button className='register-btn'
                                     content='Sign up'
                                     icon='signup'
