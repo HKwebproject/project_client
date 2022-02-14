@@ -14,7 +14,7 @@ function Sidebar() {
 
   return (
     <div id = "sidebar">
-      <div className = "icon">
+      <div className = "menu-icon">
         <BiCategory size="30px" onClick = {IconClick}/>
       </div>
       <div className = {menu ? "sectionClick" : "section"}>

@@ -3,14 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-#body{
+#body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-image: url("../image/login_back.png");
 
-  .login-form  {
+  .login-form {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,17 +19,16 @@
     height: 575px;
     box-shadow: 0px 0px 30px #2e2650;
   }
-  .image-wrapper{
+  .image-wrapper {
     height: 100%;
     display: flex;
     align-items: center;
     background-color: white;
-
   }
-  .non-image{
+  .non-image {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 50%;
     height: 100%;
@@ -39,30 +38,30 @@
       color: white;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 70px ;
+      margin-bottom: 20px;
     }
   }
   .input-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 500px;
     position: relative;
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-weight: bold;
     font-size: medium;
 
-    Input {
+    input {
       width: 75%;
-      padding: 15px .8em .8em;
+      padding: 15px 0.8rem 0.8rem;
       background-color: transparent;
-      border: 2px solid white;
-      border-radius: 30px;
+      border: 3px solid white;
+      border-radius: 25px;
       font-size: 18px;
       color: white;
       outline: none;
     }
-
     label {
       position: absolute;
       left: 40px;
@@ -74,7 +73,8 @@
   .btn-area {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
     button {
       display: flex;
@@ -92,4 +92,3 @@
     }
   }
 }
-
